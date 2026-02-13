@@ -3,6 +3,7 @@
 | NIM |  254107020029 |
 | Nama |  Athiarahima Muthmainnah |
 | Kelas | TI - 1F |
+| Absen | 05 |
 | Repository | (https://github.com/athia26/PraktikumASD2026.git) |
 
 # #1 KONSEP DASAR PEMROGRAMAN
@@ -27,4 +28,10 @@ Hasil pengulangan dengan angka belakang NIM : 29
 Hasil array menghitung IP semester: 
 
 ![Hasil](image/array.png)
+
+## 1.3. Fungsi
+
+Hasil fungsi: 
+
+![Hasil](image/fungsi.png)
 
