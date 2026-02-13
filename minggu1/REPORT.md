@@ -20,5 +20,11 @@ Hasil jika memasukkan nilai tidak valid:
 
 Hasil pengulangan dengan angka belakang NIM : 29
 
-![Hasil Tidak Valid](image/perulangan.png)
+![Hasil](image/perulangan.png)
+
+## 1.3. Array
+
+Hasil array menghitung IP semester: 
+
+![Hasil](image/array.png)
 
