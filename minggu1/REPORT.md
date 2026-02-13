@@ -1,7 +1,13 @@
-# Project Title
+|  | Praktikum Algoritma & Struktur Data |
+|--|--|
+| NIM |  254107020029 |
+| Nama |  Athiarahima Muthmainnah |
+| Kelas | TI - 1F |
+| Repository | [link] (https://github.com/athia26/PraktikumASD2026.git) |
 
-Simple overview of use/purpose.
+# Labs #1 KONSEP DASAR PEMROGRAMAN
 
-## Description
+## 2.1.1. Pemilihan
 
-An in-depth paragraph about your project and overview of use.
+
+![Screenshot](img/img1.png)
