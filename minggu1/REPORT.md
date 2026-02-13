@@ -7,7 +7,12 @@
 
 # #1 KONSEP DASAR PEMROGRAMAN
 
-## 2.1.1. Pemilihan
-
+## 1.1. Pemilihan
+Hasil jika memasukkan nilai valid: 
 ![Hasil Berhasil](image/pemilihan.png)
+
+Hasil jika memasukkan nilai tidak valid: 
 ![Hasil Tidak Valid](image/pemilihan2.png)
+
+## 1.2. Pengulangan
+
