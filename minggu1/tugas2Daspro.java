@@ -11,7 +11,7 @@ public class tugas2Daspro {
 
         boolean exit = false;
         while (!exit) {
-            System.out.println("================================");
+            System.out.println("\n================================");
             System.out.println("Menu:");
             System.out.println("1. Input jadwal");
             System.out.println("2. Tampilkan jadwal");
@@ -75,25 +75,49 @@ public class tugas2Daspro {
         System.out.print("Masukkan hari yang dicari: ");
         String hari = athia.nextLine();
         System.out.println("\nJadwal pada hari " + hari + ":");
+        System.out.printf("%-25s %-20s %-10s %-15s\n",
+                "Mata Kuliah", "Ruang", "Hari", "Jam");
+        System.out.println("-------------------------------------------------------------");    
+        
+        boolean found = false;
         for (int i = 0; i < n; i++) {
             if (jadwal[i][2].equalsIgnoreCase(hari)) {
-                System.out.printf("%-25s %-20s %-15s\n",
-                        jadwal[i][0],
-                        jadwal[i][1],
-                        jadwal[i][3]);
+                System.out.printf("%-25s %-20s %-10s %-15s\n",
+                    jadwal[i][0],
+                    jadwal[i][1],
+                    jadwal[i][2],
+                    jadwal[i][3]);
+                }
+                found = true;
             }
-        }
+        
+        if (!found) System.out.println("Tidak ada jadwal pada hari " + hari);
     }
 
     public static void cariMatkul(String[][] jadwal, int n) {
         System.out.print("Masukkan nama mata kuliah yang dicari: ");
         String matkul = athia.nextLine();
-        System.out.println("Hasil pencarian:");
+        System.out.println("Jadwal dengan matkul " +matkul+": ");
+
+        System.out.printf("%-25s %-20s %-10s %-15s\n",
+        "Mata Kuliah", "Ruang", "Hari", "Jam");
+        System.out.println("-------------------------------------------------------------");    
+
+        boolean found = false;  
+
         for (int i = 0; i < n; i++) {
             if (jadwal[i][0].equalsIgnoreCase(matkul)) {
-                System.out.println(jadwal[i][0] + " | " + jadwal[i][1] + " | " + jadwal[i][2] + " | " + jadwal[i][3]);
+                System.out.printf("%-25s %-20s %-10s %-15s\n",
+                    jadwal[i][0],
+                    jadwal[i][1],
+                    jadwal[i][2],
+                    jadwal[i][3]);
+                }
+                found = true;
             }
-        }
+        
+        if (!found) System.out.println("Tidak ada jadwal pada hari " + matkul);
+    
     }
 
 }

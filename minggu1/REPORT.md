@@ -29,9 +29,36 @@ Hasil array menghitung IP semester:
 
 ![Hasil](image/array.png)
 
-## 1.3. Fungsi
+## 1.4. Fungsi
 
 Hasil fungsi: 
 
 ![Hasil](image/fungsi.png)
+
+## 1.5. Tugas 1 
+
+Hasil tugas 1: 
+
+![Hasil](image/tugas1.png)
+
+## 1.6. Tugas 2 
+
+Hasil tugas 2, Input jadwal: 
+
+![Hasil](image/tugas2.1.png)
+
+Hasil tugas 2, Tampilkan jadwal: 
+
+![Hasil](image/tugas2.2.png)
+
+Hasil tugas 2, Tampilkan jadwal dengan pencarian hari: 
+
+![Hasil](image/tugas2.3.png)
+
+Hasil tugas 2, Tampilkan jadwal dengan pencarian nama mata kuliah: 
+
+![Hasil](image/tugas2.4.png)
+
+
+
 
