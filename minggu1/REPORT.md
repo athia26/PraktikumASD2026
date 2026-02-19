@@ -57,7 +57,7 @@ Hasil tugas 2, Tampilkan jadwal dengan pencarian hari:
 
 Hasil tugas 2, Tampilkan jadwal dengan pencarian nama mata kuliah: 
 
-![Hasil](image/tugas 2.4.png)
+![Hasil](image/tugas2.4.png)
 
 
 
