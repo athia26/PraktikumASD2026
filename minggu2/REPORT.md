@@ -93,6 +93,11 @@ Hasil latihan 1 setelah di run:
 
 ![Hasil run](image/latihan1.png)
 
+## 1.5. Latihan 2
+Hasil latihan 2 setelah di run: 
+
+![Hasil run](image/latihan2.png)
+
 
 
 
