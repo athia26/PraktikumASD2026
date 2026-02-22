@@ -35,7 +35,7 @@ Hasil percobaan 1 setelah di run:
     - Method menerima nilai IPK, lalu mengeceknya dengan kondisi if else, jika nilai ipk lebih dari 3.5, maka nilai kinerja sangat baik, jika lebih dari 3 maka kinerja baik, jika lebih dari 2 maka kinerja cukup dan jika selain dari itu, maka kinerja kurang. Hasil dari kondisi itu dikembalikan dengan return untuk nantinya ditampilkan saat program dijalankan 
 
 
-## 1.2. Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+## 1.2. Percobaan 2: Instansiasi Object, Mengakses Atribut dan Method
 Hasil percobaan 2 setelah di run: 
 
 ![Hasil stlh run](image/percobaan2.png)
@@ -53,6 +53,39 @@ Hasil percobaan 2 setelah di run:
 3. Mengapa hasil output pemanggilan method tampilkanInformasi() pertama dan kedua berbeda?
 
     - Karena di pemanggilan method pertama, method menggunakan data yang dimasukkan pertama kali, setelah itu terjadi pemanggilan method ubahKelas() dan updateIPK() yg menimpa data pertama dan menggantinya dengan data yang dimasukkan di method ubahKelas() dan updateIPK().
+
+
+
+## 1.2. Percobaan 3: Membuat Konstruktor 
+Hasil percobaan 3 setelah di run: 
+
+![Hasil run](image/percobaan3.png)
+
+### Pertanyaan Percobaan 1: 
+1. Pada class MahasiswaMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan?
+    
+    - Proses instansiasi ada di baris berikut: 
+    ![Hasil run](image/p3tanya1.png)
+    
+    - Nama object yang dihasilkan adalah mhs2 
+
+2. Perhatikan class MahasiswaMain. Apa sebenarnya yang dilakukan pada baris program berikut? 
+
+    - Kode tersebut melakukan proses instansiasi yaitu membuat object baru dari class Mahasiswa yang memiliki parameter dan mengisi nilai awal atribut dengan data yang sesuai. Object yang baru diberikan nama yaitu mhs2 
+
+3. Hapus konstruktor default pada class Mahasiswa, kemudian compile dan run program. Bagaimana hasilnya? Jelaskan mengapa hasilnya demikian!
+
+    ![Hasil run](image/p3tanya3.png)
+    
+    - Hasilnya error, karena setelah konstruktor default dihapus, class Mahasiswa tidak lagi memiliki konstruktor kosong. Oleh karena itu, objek hanya bisa dibuat menggunakan konstruktor yang memiliki parameter.
+
+4. Setelah melakukan instansiasi object, apakah method di dalam class Mahasiswa harus diakses secara berurutan? Jelaskan alasannya!
+
+    - Tidak harus berurutan, karena method di dalam class dapat berdiri sendiri dan bisa dipanggil di mana saja sesuai kebutuhan. 
+
+5. Buat object baru dengan nama mhs<NamaMahasiswa> menggunakan konstruktor berparameter dari class Mahasiswa!
+
+    - ![Hasil run](image/p3tanya5.png)
 
 
 
