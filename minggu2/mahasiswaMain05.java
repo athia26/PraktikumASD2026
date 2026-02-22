@@ -2,7 +2,7 @@ package minggu2;
 
 public class mahasiswaMain05 {
     public static void main(String[] args) {
-        Mahasiswa mhs1 = new Mahasiswa();
+        mahasiswa mhs1 = new mahasiswa();
 
         mhs1.nama = "Muhammad Ali Farhan";
         mhs1.nim = "2241720171";
@@ -14,11 +14,11 @@ public class mahasiswaMain05 {
         mhs1.updateIPK( 3.60);
         mhs1.tampilkanInformasi();
 
-        Mahasiswa mhs2 = new Mahasiswa("Annisa Nabila", "12345", 3.25, "TI-2L");
+        mahasiswa mhs2 = new mahasiswa("Annisa Nabila", "12345", 3.25, "TI-2L");
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
 
-        Mahasiswa mhsBudi = new Mahasiswa("Budi", "1234556", 3.50, "TI-2A");
+        mahasiswa mhsBudi = new mahasiswa("Budi", "1234556", 3.50, "TI-2A");
         mhsBudi.tampilkanInformasi();
 
     }

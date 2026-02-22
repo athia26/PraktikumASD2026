@@ -1,16 +1,16 @@
 package minggu2;
 
-public class Mahasiswa {
+public class mahasiswa {
     String nama;
     String nim;
     String kelas;
     double ipk;
 
-    public Mahasiswa(){
+    public mahasiswa(){
 
     }
 
-    public Mahasiswa(String nama, String nim, double ipk, String kelas){
+    public mahasiswa(String nama, String nim, double ipk, String kelas){
         this.nama = nama;
         this.nim = nim;
         this.ipk = ipk;

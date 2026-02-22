@@ -56,7 +56,7 @@ Hasil percobaan 2 setelah di run:
 
 
 
-## 1.2. Percobaan 3: Membuat Konstruktor 
+## 1.3. Percobaan 3: Membuat Konstruktor 
 Hasil percobaan 3 setelah di run: 
 
 ![Hasil run](image/percobaan3.png)
@@ -86,6 +86,13 @@ Hasil percobaan 3 setelah di run:
 5. Buat object baru dengan nama mhs<NamaMahasiswa> menggunakan konstruktor berparameter dari class Mahasiswa!
 
     - ![Hasil run](image/p3tanya5.png)
+
+
+## 1.4. Latihan 1
+Hasil latihan 1 setelah di run: 
+
+![Hasil run](image/latihan1.png)
+
 
 
 
