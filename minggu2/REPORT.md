@@ -35,7 +35,24 @@ Hasil percobaan 1 setelah di run:
     - Method menerima nilai IPK, lalu mengeceknya dengan kondisi if else, jika nilai ipk lebih dari 3.5, maka nilai kinerja sangat baik, jika lebih dari 3 maka kinerja baik, jika lebih dari 2 maka kinerja cukup dan jika selain dari itu, maka kinerja kurang. Hasil dari kondisi itu dikembalikan dengan return untuk nantinya ditampilkan saat program dijalankan 
 
 
+## 1.2. Percobaan 2: Instansiasi Object, serta Mengakses Atribut dan Method
+Hasil percobaan 2 setelah di run: 
 
+![Hasil stlh run](image/percobaan2.png)
+
+### Pertanyaan Percobaan 1: 
+1. Pada class MahasiswaMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan?
+    
+    - Proses instansiasi pada class MahasiswaMain ada di block code: Mahasiswa mhs1 = new Mahasiswa().
+    - Nama object baru yang dihasilkan adalah mhs1. 
+
+2. Bagaimana cara mengakses atribut dan method dari suatu objek?
+    
+    - Dengan memanggil nama object lalu diteruskan dengan nama atribut/nama method yang ada di dalam object tersebut dan dipisahkan dengan titik. 
+
+3. Mengapa hasil output pemanggilan method tampilkanInformasi() pertama dan kedua berbeda?
+
+    - Karena di pemanggilan method pertama, method menggunakan data yang dimasukkan pertama kali, setelah itu terjadi pemanggilan method ubahKelas() dan updateIPK() yg menimpa data pertama dan menggantinya dengan data yang dimasukkan di method ubahKelas() dan updateIPK().
 
 
 
