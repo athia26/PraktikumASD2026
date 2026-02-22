@@ -1,6 +1,6 @@
 package minggu2;
 
-public class mahasiswa05 {
+public class Mahasiswa {
     String nama;
     String nim;
     String kelas;
