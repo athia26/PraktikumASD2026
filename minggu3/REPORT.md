@@ -1,3 +1,17 @@
+|  | Praktikum Algoritma & Struktur Data |
+|--|--|
+| NIM |  254107020029 |
+| Nama |  Athiarahima Muthmainnah |
+| Kelas | TI - 1F |
+| Absen | 05 |
+| Repository | (https://github.com/athia26/PraktikumASD2026.git) |
+
+# #3 ARRAY OF OBJECTS
+
+## 3.1. Percobaan 1: Membuat Array dari Object, Mengisi dan Menampilkan
+
+Hasil dari run:
+
 ```java
 NIM     : 224107060033
 Nama    : AGNES TITANIA KINANTI
@@ -15,3 +29,4 @@ Kelas   : TI-2E
 IPK     : 0.0
 -------------------------------------
 ```
+
