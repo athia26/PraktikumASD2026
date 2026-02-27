@@ -5,8 +5,6 @@ public class Mahasiswa05 {
     public String nama;
     public String kelas;
     public float ipk;
-
-    
 }
 
 
