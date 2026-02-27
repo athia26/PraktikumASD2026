@@ -100,5 +100,5 @@ Hasil latihan 2 setelah di run:
 
 
 
-
+ 
 
