@@ -63,7 +63,75 @@ arrayOfMahasiswa[0] = new Mahasiswa05();
 
 5. Mengapa class Mahasiswa dan MahasiswaDemo dipisahkan pada uji coba 3.2?
 
-    - Karena fungsi mereka berbeda, class Mahasiswa05 digunakan untuk cetakan object, sedangkan class mahasiswaDemo05 digunakan untuk menjalankan program. Dipisah karena mengikuti prinsip OOP. 
+- Karena fungsi mereka berbeda, class Mahasiswa05 digunakan untuk cetakan object, sedangkan class mahasiswaDemo05 digunakan untuk menjalankan program. Dipisah karena mengikuti prinsip OOP. 
+
+
+## 3.1. Percobaan 2: Menerima Input Isian Array Menggunakan Looping
+
+Hasil dari run:
+
+```java
+Masukkan Data Mahasiswa ke-1
+NIM     : 1234567
+Nama    : Athia
+Kelas   : TI-1F
+IPK     : 3.80
+-------------------------------------
+Masukkan Data Mahasiswa ke-2
+NIM     : 2345678
+Nama    : Alya
+Kelas   : TI-1F
+IPK     : 3.75
+-------------------------------------
+Masukkan Data Mahasiswa ke-3
+NIM     : 3456789
+Nama    : Cindy 
+Kelas   : TI-1F
+IPK     : 3.78
+-------------------------------------
+Data Mahasiswa ke-1
+NIM     : 1234567
+Nama    : Athia
+Kelas   : TI-1F
+IPK     : 3.8
+-------------------------------------
+Data Mahasiswa ke-2
+NIM     : 2345678
+Nama    : Alya
+Kelas   : TI-1F
+IPK     : 3.75
+-------------------------------------
+Data Mahasiswa ke-3
+NIM     : 3456789
+Nama    : Cindy 
+Kelas   : TI-1F
+IPK     : 3.78
+-------------------------------------
+```
+
+### Pertanyaan Percobaan 1: 
+1. Tambahkan method cetakInfo() pada class Mahasiswa kemudian modifikasi kode program pada langkah no 3.
+
+```java
+public void cetakInfo(){
+    System.out.println("NIM     : "+nim);
+    System.out.println("Nama    : " +nama);
+    System.out.println("Kelas   : "+kelas);
+    System.out.println("IPK     : "+ipk);
+}
+
+------
+for (int i = 0; i < arrayOfMahasiswa.length; i++) {
+    System.out.println("Data Mahasiswa ke-" + (i+1));            arrayOfMahasiswa[i].cetakInfo();
+}
+
+```
+
+2. Misalkan Anda punya array baru bertipe array of Mahasiswa dengan nama myArrayOfMahasiswa. Mengapa kode berikut menyebabkan error?
+- Karena instansiasi tersebut hanya membuat slot array sebanyak 3 saja, dan belum membuat 3 object Mahasiswa05 di dalamnya. Isi dari array tersebut masih null. 
+
+
+
 
 
 
