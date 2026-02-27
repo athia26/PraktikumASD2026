@@ -66,7 +66,7 @@ arrayOfMahasiswa[0] = new Mahasiswa05();
 - Karena fungsi mereka berbeda, class Mahasiswa05 digunakan untuk cetakan object, sedangkan class mahasiswaDemo05 digunakan untuk menjalankan program. Dipisah karena mengikuti prinsip OOP. 
 
 
-## 3.1. Percobaan 2: Menerima Input Isian Array Menggunakan Looping
+## 3.2. Percobaan 2: Menerima Input Isian Array Menggunakan Looping
 
 Hasil dari run:
 
@@ -109,26 +109,156 @@ IPK     : 3.78
 -------------------------------------
 ```
 
-### Pertanyaan Percobaan 1: 
+### Pertanyaan Percobaan 2: 
 1. Tambahkan method cetakInfo() pada class Mahasiswa kemudian modifikasi kode program pada langkah no 3.
+
+    ```java
+    public void cetakInfo(){
+        System.out.println("NIM     : "+nim);
+        System.out.println("Nama    : " +nama);
+        System.out.println("Kelas   : "+kelas);
+        System.out.println("IPK     : "+ipk);
+    }
+
+    ------
+    for (int i = 0; i < arrayOfMahasiswa.length; i++) {
+        System.out.println("Data Mahasiswa ke-" + (i+1));            
+        arrayOfMahasiswa[i].cetakInfo();
+    }
+
+    ```
+
+2. Misalkan Anda punya array baru bertipe array of Mahasiswa dengan nama myArrayOfMahasiswa. Mengapa kode berikut menyebabkan error?
+- Karena instansiasi tersebut hanya membuat slot array sebanyak 3 saja, dan belum membuat 3 object Mahasiswa05 di dalamnya. Isi dari array tersebut masih null. 
+
+## 3.3. Percobaan 3: Constructor Berparameter
+
+Hasil dari run:
+```java
+Masukkan Data Matakuliah ke-1
+Kode       : K001
+Nama       : ASD
+SKS        : 6
+Jumlah Jam : 4
+----------------------------
+Masukkan Data Matakuliah ke-2
+Kode       : K002
+Nama       : Basdat
+SKS        : 4
+Jumlah Jam : 6
+----------------------------
+Masukkan Data Matakuliah ke-3
+Kode       : K003
+Nama       : Agama
+SKS        : 2
+Jumlah Jam : 2
+----------------------------
+Data Matakuliah ke-1
+Kode        : K001
+Nama        : ASD
+SKS         : 6
+Jumlah Jam  : 4
+----------------------------
+Data Matakuliah ke-2
+Kode        : K002
+Nama        : Basdat
+SKS         : 4
+Jumlah Jam  : 6
+----------------------------
+Data Matakuliah ke-3
+Kode        : K003
+Nama        : Agama
+SKS         : 2
+Jumlah Jam  : 2
+----------------------------
+```
+
+### Pertanyaan Percobaan 3: 
+1. Apakah suatu class dapat memiliki lebih dari 1 constructor? Jika iya, berikan contohnya 
+- Bisa, selama parameternya berbeda. Java akan otomatis memilih class dengan konstruktor yang sesuai. 
+
+2. Tambahkan method tambahData() pada class Matakuliah, kemudian gunakan method tersebut di class MatakuliahDemo untuk menambahkan data Matakuliah
+```java
+public mataKuliah05(){
+       
+    }
+
+public void tambahData(String kode, String nama, int sks, int jumlahJam){
+    this.kode = kode;
+    this.nama = nama;
+    this.sks = sks;
+    this.jumlahJam = jumlahJam;
+}
+
+-------
+
+arrayOfMataKuliah[i] = new mataKuliah05();
+arrayOfMataKuliah[i].tambahData(kode, nama, sks, jumlahJam);
+
+```
+
+3. Tambahkan method cetakInfo() pada class Matakuliah, kemudian gunakan method tersebut di class MatakuliahDemo untuk menampilkan data hasil inputan di layar
 
 ```java
 public void cetakInfo(){
-    System.out.println("NIM     : "+nim);
-    System.out.println("Nama    : " +nama);
-    System.out.println("Kelas   : "+kelas);
-    System.out.println("IPK     : "+ipk);
+    System.out.println("Kode        : "+kode);
+    System.out.println("Nama        : " +nama);
+    System.out.println("SKS         : "+sks);
+    System.out.println("Jumlah Jam  : "+jumlahJam);
 }
 
-------
-for (int i = 0; i < arrayOfMahasiswa.length; i++) {
-    System.out.println("Data Mahasiswa ke-" + (i+1));            arrayOfMahasiswa[i].cetakInfo();
+-----------
+
+for (int i = 0; i < arrayOfMataKuliah.length; i++) {
+    System.out.println("Data Matakuliah ke-" + (i + 1));
+    arrayOfMataKuliah[i].cetakInfo();
 }
 
 ```
 
-2. Misalkan Anda punya array baru bertipe array of Mahasiswa dengan nama myArrayOfMahasiswa. Mengapa kode berikut menyebabkan error?
-- Karena instansiasi tersebut hanya membuat slot array sebanyak 3 saja, dan belum membuat 3 object Mahasiswa05 di dalamnya. Isi dari array tersebut masih null. 
+4. Modifikasi kode program pada class MatakuliahDemo agar panjang (jumlah elemen) dari array of object Matakuliah ditentukan oleh user melalui input dengan Scanner
+
+Kode Program:
+```java
+System.out.print("Masukkan jumlah mata kuliah yang akan diinput: ");
+int index = sc.nextInt();
+```
+
+Hasil run: 
+```java
+Masukkan jumlah mata kuliah yang akan diinput: 2
+Masukkan Data Matakuliah ke-1
+Kode      : K001
+Nama      : ASD
+SKS       : 6
+Jumlah Jam : 4
+----------------------------
+Masukkan Data Matakuliah ke-2
+Kode      : K002
+Nama      : Basis Data
+SKS       : 8
+Jumlah Jam : 6
+----------------------------
+Data Matakuliah ke-1
+Kode        : K001
+Nama        : ASD
+SKS         : 6
+Jumlah Jam  : 4
+----------------------------
+Data Matakuliah ke-2
+Kode        : K002
+Nama        : Basis Data
+SKS         : 8
+Jumlah Jam  : 6
+----------------------------
+```
+
+
+
+
+
+
+
 
 
 
