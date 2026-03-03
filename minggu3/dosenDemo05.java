@@ -10,13 +10,14 @@ public class dosenDemo05 {
         int jmlDosen = sc.nextInt();
         sc.nextLine();
 
-        dosen05[] arrayofDosen05s = new dosen05[jmlDosen];
+        dosen05[] arrayofDosen05 = new dosen05[jmlDosen];
+        dataDosen05 data = new dataDosen05();
 
         String kode, nama, jk; 
         Boolean jenisKelamin; 
         int usia; 
 
-        for (int i = 0; i < arrayofDosen05s.length; i++) {
+        for (int i = 0; i < arrayofDosen05.length; i++) {
             System.out.println("------------------------");
             System.out.println("Masukkan Data Dosen ke-"+(i+1));
 
@@ -34,13 +35,15 @@ public class dosenDemo05 {
             usia = sc.nextInt();
             sc.nextLine();
 
-            arrayofDosen05s[i] = new dosen05(kode, nama, jenisKelamin, usia);
+            arrayofDosen05[i] = new dosen05(kode, nama, jenisKelamin, usia);
             
         }
 
-        System.out.println("\n==== DATA DOSEN ==== ");
-        for (dosen05 dsn : arrayofDosen05s) {
-            dsn.cetakInfo();
-        }
+    data.dataSemuaDosen(arrayofDosen05);
+    data.jumlahDosenPerJenisKelamin(arrayofDosen05);
+    data.rerataUsiaDosenPerJenisKelamin(arrayofDosen05);
+    data.infoDosenPlgTua(arrayofDosen05);
+    data.infoDosenPlgMuda(arrayofDosen05);
+
     }
 }

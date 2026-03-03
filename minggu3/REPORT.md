@@ -285,6 +285,73 @@ Usia          : 43 tahun
 ```
 
 
+## 3.5. Tugas 2
+Hasil run tugas 2: 
+
+Proses memasukkan data: 
+```java
+Masukkan jumlah dosen: 3
+------------------------
+Masukkan Data Dosen ke-1
+Kode    : D001
+Nama    : Aisyah Kamila
+Jenis Kelamin (L/P): P     
+Usia    : 24
+------------------------
+Masukkan Data Dosen ke-2
+Kode    : D002
+Nama    : Akmal ahmad
+Jenis Kelamin (L/P): l
+Usia    : 30
+------------------------
+Masukkan Data Dosen ke-3
+Kode    : D003
+Nama    : wahyuningtyas
+Jenis Kelamin (L/P): p
+Usia    : 50
+```
+
+Hasil run class dataDosen:
+```java
+===== DATA SEMUA DOSEN =====
+Kode          : D001
+Nama          : Aisyah Kamila
+Jenis Kelamin : Perempuan
+Usia          : 24 tahun
+-----------------------------------
+Kode          : D002
+Nama          : Akmal ahmad
+Jenis Kelamin : Laki-laki
+Usia          : 30 tahun
+-----------------------------------
+Kode          : D003
+Nama          : wahyuningtyas
+Jenis Kelamin : Perempuan
+Usia          : 50 tahun
+-----------------------------------
+===== JUMLAH DOSEN =====
+Dosen Laki      : 1
+Dosen Perempuan : 2
+-----------------------------------
+===== RATA-RATA USIA =====
+Dosen Laki      : 30
+Dosen Perempuan : 37
+-----------------------------------
+===== Dosen Paling Tua =====
+Kode          : D003
+Nama          : wahyuningtyas
+Jenis Kelamin : Perempuan
+Usia          : 50 tahun
+-----------------------------------
+===== Dosen Paling Muda =====
+Kode          : D001
+Nama          : Aisyah Kamila
+Jenis Kelamin : Perempuan
+Usia          : 24 tahun
+-----------------------------------
+```
+
+
 
 
 
