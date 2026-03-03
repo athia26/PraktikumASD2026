@@ -253,6 +253,37 @@ Jumlah Jam  : 6
 ----------------------------
 ```
 
+## 3.4. Tugas 1 
+Hasil run tugas 1: 
+
+```java
+Masukkan jumlah dosen: 2
+------------------------
+Masukkan Data Dosen ke-1
+Kode    : D001
+Nama    : Budi
+Jenis Kelamin (L/P): L
+Usia    : 45
+------------------------
+Masukkan Data Dosen ke-2
+Kode    : D002
+Nama    : Sari
+Jenis Kelamin (L/P): P
+Usia    : 43
+
+==== DATA DOSEN ==== 
+Kode          : D001
+Nama          : Budi
+Jenis Kelamin : Laki-laki
+Usia          : 45 tahun
+-----------------------------------
+Kode          : D002
+Nama          : Sari
+Jenis Kelamin : Perempuan
+Usia          : 43 tahun
+-----------------------------------
+```
+
 
 
 
