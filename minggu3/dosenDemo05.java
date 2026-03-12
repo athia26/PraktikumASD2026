@@ -12,6 +12,7 @@ public class dosenDemo05 {
 
         dosen05[] arrayofDosen05 = new dosen05[jmlDosen];
         dataDosen05 data = new dataDosen05();
+        
 
         String kode, nama, jk; 
         Boolean jenisKelamin; 
@@ -44,6 +45,7 @@ public class dosenDemo05 {
     data.rerataUsiaDosenPerJenisKelamin(arrayofDosen05);
     data.infoDosenPlgTua(arrayofDosen05);
     data.infoDosenPlgMuda(arrayofDosen05);
+    
 
     }
 }
