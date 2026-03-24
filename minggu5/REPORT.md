@@ -134,5 +134,18 @@ if (l == r){
 - Method totalDC() melakukan penghitungan total nilai array menggunakan algoritma Divide and Conquer. method tersebut membagi array jadi dua bagian dengan varibel mid, lalu menghitung masing masing bagian dengan menggunakan fungsi rekursi, dan me-return-kan hasil penjumlahan dari perhitungan bagian kiri dan kanan. 
 
 
+## 5.4. Latihan Praktikum
+1. Tentukan:
+    a. Nilau UTS tertinggi tertinggi menggunakan Divide and Conquer!
+    b. Nilai UTS terendah menggunakan Divide and Conquer!
+    c. Rata-rata nilai UAS dari semua mahasiswa menggunakan Brute Force!
+
+### Hasil Latihan: 
+```java
+Nilai UTS tertinggi : 92
+Nilai UTS terendah  : 76
+Rata-rata UAS       : 85.375
+```
+
 
 
