@@ -137,7 +137,9 @@ if (l == r){
 ## 5.4. Latihan Praktikum
 1. Tentukan:
     a. Nilau UTS tertinggi tertinggi menggunakan Divide and Conquer!
+    
     b. Nilai UTS terendah menggunakan Divide and Conquer!
+    
     c. Rata-rata nilai UAS dari semua mahasiswa menggunakan Brute Force!
 
 ### Hasil Latihan: 
