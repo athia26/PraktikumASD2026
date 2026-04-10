@@ -6,9 +6,9 @@ public class mahasiswaMain05 {
     public static void main(String[] args) {
         Scanner athia = new Scanner(System.in);
 
-        System.out.print("Masukkan jumlah mahasiswa : ");
-        int jumlahMhs = athia.nextInt();
-        athia.nextLine();
+        //System.out.print("Masukkan jumlah mahasiswa : ");
+        int jumlahMhs = 5;
+        //athia.nextLine();
         
         mahasiswaPrestasi list = new mahasiswaPrestasi(jumlahMhs);
 
@@ -34,19 +34,21 @@ public class mahasiswaMain05 {
         }
 
 
-        System.out.println("Data Mahasiswa sebelum sorting");
+        //System.out.println("Data Mahasiswa sebelum sorting");
         list.tampil();
 
-        // System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        // list.bubbleSort();
-        // list.tampil();
+        System.out.println("----------------------------------------");
+        System.out.println("Pencarian Data");
+        System.out.println("----------------------------------------");
+        System.out.println("Masukkan IPK Mahasiswa yang dicari: ");
+        System.out.print("IPK: ");
+        double cari = athia.nextDouble();
 
-        // System.out.println("Data Mahasiswa sudah terurut menggunakan SELECTION SORT (ASC): ");
-        // list.selectionSort();
-        // list.tampil();
-
-        System.out.println("Data Mahasiswa sudah terurut menggunakan INSERTION SORT (ASC): ");
-        list.insertionSort();
-        list.tampil();
+        System.out.println("Menggunakan binary searching");
+        double posisi = list.findBinarySearch(cari, 0, jumlahMhs-1);
+        int pss = (int) posisi; 
+        list.tampilPosisi(cari, pss);
+        list.tampilDataSearch(cari, pss);
+        
     }
 }
