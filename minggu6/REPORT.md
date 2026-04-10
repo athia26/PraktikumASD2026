@@ -89,3 +89,133 @@ for (int j = i+1; j < jumData; j++) {
 4. Tujuan dari perintah data[j+1] = data[j];
 
 - Perintah ini berfungsi untuk menggeser elemen ke kanan. Ketika ditemukan bahwa data[j] > temp, maka nilai pada indeks j dipindahkan ke indeks j+1. Tujuannya adalah untuk memberikan ruang bagi nilai temp agar dapat dimasukkan ke posisi yang benar.
+
+
+## 5.3. Praktikum 2:  Sorting Menggunakan Array of Object
+
+```java
+Data Mahasiswa sebelum sorting
+Nama    : Zidan
+NIM     : 123
+Kelas   : 2A
+IPK     : 3.2
+----------------------------
+Nama    : Ayu
+NIM     : 124
+Kelas   : 2A
+IPK     : 3.5
+----------------------------
+Nama    : Sofi
+NIM     : 125
+Kelas   : 2A
+IPK     : 3.1
+----------------------------
+Nama    : Sita
+NIM     : 126
+Kelas   : 2A
+IPK     : 3.9
+----------------------------
+Nama    : Miki
+NIM     : 127
+Kelas   : 2A
+IPK     : 3.7
+----------------------------
+Data Mahasiswa setelah sorting berdasarkan IPK (DESC) : 
+Nama    : Sita
+NIM     : 126
+Kelas   : 2A
+IPK     : 3.9
+----------------------------
+Nama    : Miki
+NIM     : 127
+Kelas   : 2A
+IPK     : 3.7
+----------------------------
+Nama    : Ayu
+NIM     : 124
+Kelas   : 2A
+IPK     : 3.5
+----------------------------
+Nama    : Zidan
+NIM     : 123
+Kelas   : 2A
+IPK     : 3.2
+----------------------------
+Nama    : Sofi
+NIM     : 125
+Kelas   : 2A
+IPK     : 3.1
+----------------------------
+```
+
+### Pertanyaan Praktikum 2: 
+
+1. Perhatikan perulangan di dalam bubbleSort() di bawah ini:
+```java
+for (int i = 0; i < listMhs.length-1; i++) {
+for (int j = 1; j < listMhs.length-i; j++) {
+```
+
+    a. Mengapa syarat dari perulangan i adalah i<listMhs.length-1 ?
+        - Syarat i < listMhs.length-1 digunakan karena dalam Bubble Sort, setiap iterasi akan menempatkan satu elemen terbesar ke posisi paling akhir. Setelah melakukan n-1 iterasi (dengan n adalah jumlah data), seluruh data sudah pasti terurut.
+
+    b. Mengapa syarat dari perulangan j adalah j<listMhs.length-i ?
+        - Syarat j < listMhs.length - i digunakan karena pada setiap iterasi ke-i, elemen terbesar sudah berpindah ke bagian akhir array dan tidak perlu dibandingkan lagi.
+
+    c. Jika banyak data di dalam listMhs adalah 50, maka berapakali perulangan i akan berlangsung? Dan ada berapa Tahap bubble sort yang ditempuh?
+        - Perulangan i berlangsung sebanyak: 50 - 1 = 49 kali
+        - Jumlah tahap (pass) Bubble Sort: 49 tahap
+
+
+2. Modifikasi program diatas dimana data mahasiswa bersifat dinamis (input dari keyboard) yang terdiri dari nim, nama, kelas, dan ipk!
+```java
+Masukkan jumlah mahasiswa : 3
+--- Data Mahasiswa ke -1 ---
+NIM : 1234
+Nama : Athia
+Kelas : 1F
+IPK : 3.8
+--- Data Mahasiswa ke -2 ---
+NIM : 1235
+Nama : Cindy
+Kelas : 1F
+IPK : 3.75
+--- Data Mahasiswa ke -3 ---
+NIM : 1236
+Nama : Budi 
+Kelas : 1A
+IPK : 3.9
+
+Data Mahasiswa sebelum sorting
+Nama    : Athia
+NIM     : 1234
+Kelas   : 1F
+IPK     : 3.8
+----------------------------
+Nama    : Cindy
+NIM     : 1235
+Kelas   : 1F
+IPK     : 3.75
+----------------------------
+Nama    : Budi
+NIM     : 1236
+Kelas   : 1A
+IPK     : 3.9
+----------------------------
+Data Mahasiswa setelah sorting berdasarkan IPK (DESC) : 
+Nama    : Budi
+NIM     : 1236
+Kelas   : 1A
+IPK     : 3.9
+----------------------------
+Nama    : Athia
+NIM     : 1234
+Kelas   : 1F
+IPK     : 3.8
+----------------------------
+Nama    : Cindy
+NIM     : 1235
+Kelas   : 1F
+IPK     : 3.75
+----------------------------
+```

@@ -1,20 +1,38 @@
 package minggu6;
 
+import java.util.Scanner;
+
 public class mahasiswaMain05 {
     public static void main(String[] args) {
-        mahasiswaPrestasi list = new mahasiswaPrestasi();
+        Scanner athia = new Scanner(System.in);
 
-        mahasiswa05 m1 = new mahasiswa05("123", "Zidan", "2A", 3.2);
-        mahasiswa05 m2 = new mahasiswa05("124", "Ayu", "2A", 3.5);
-        mahasiswa05 m3 = new mahasiswa05("125", "Sofi", "2A", 3.1);
-        mahasiswa05 m4 = new mahasiswa05("126", "Sita", "2A", 3.9);
-        mahasiswa05 m5 = new mahasiswa05("127", "Miki", "2A", 3.7);
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        int jumlahMhs = athia.nextInt();
+        athia.nextLine();
+        
+        mahasiswaPrestasi list = new mahasiswaPrestasi(jumlahMhs);
 
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
+        for (int i = 0; i < jumlahMhs; i++) {
+            System.out.println("--- Data Mahasiswa ke -"+(i+1)+" ---");
+            
+            System.out.print("NIM : ");
+            String nim = athia.nextLine();
+            
+            System.out.print("Nama : ");
+            String nama = athia.nextLine();
+
+            System.out.print("Kelas : ");
+            String kelas = athia.nextLine();
+
+            System.out.print("IPK : ");
+            double ipk = athia.nextDouble();
+            athia.nextLine();
+
+            mahasiswa05 m = new mahasiswa05(nim, nama, kelas, ipk);
+            list.tambah(m);
+
+        }
+
 
         System.out.println("Data Mahasiswa sebelum sorting");
         list.tampil();
