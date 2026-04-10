@@ -61,5 +61,31 @@ if(data[j-1]>data[j]){
 }
 ```
     
-- kondisi if (n==1) {return 1}; 
+- Kode program tersebut berfungsi untuk menukar (swap) dua elemen yang bersebelahan dalam array jika urutannya salah. Kondisi if(data[j-1] > data[j]) digunakan untuk mengecek apakah elemen di sebelah kiri lebih besar daripada elemen di sebelah kanan. Jika kondisi tersebut bernilai benar, maka kedua elemen tersebut perlu ditukar agar urutannya menjadi benar (ascending).
 
+
+2. Tunjukkan kode program yang merupakan algoritma pencarian nilai minimum pada selection sort!
+
+- Kode program yang merupakan algoritma pencarian nilai minimum pada Selection Sort adalah bagian perulangan dalam yang digunakan untuk mencari indeks nilai terkecil dari sisa array:
+
+```java
+int min = i;
+for (int j = i+1; j < jumData; j++) {
+    if (data[j] < data[min]) {
+        min = j;
+    }
+}
+```
+
+3. Penjelasan kondisi pada perulangan while (j>=0 && data[j]>temp)
+
+- j >= 0
+    Digunakan untuk memastikan bahwa proses perulangan tidak keluar dari batas array (tidak mengakses indeks negatif).
+- data[j] > temp
+    Digunakan untuk mengecek apakah nilai di sebelah kiri (data[j]) lebih besar daripada nilai yang sedang disisipkan (temp).
+
+- Secara keseluruhan, kondisi ini berarti bahwa perulangan akan terus berjalan selama masih berada dalam batas array dan selama nilai di sebelah kiri lebih besar dari temp. Jika kedua syarat terpenuhi, maka elemen tersebut akan digeser ke kanan.
+
+4. Tujuan dari perintah data[j+1] = data[j];
+
+- Perintah ini berfungsi untuk menggeser elemen ke kanan. Ketika ditemukan bahwa data[j] > temp, maka nilai pada indeks j dipindahkan ke indeks j+1. Tujuannya adalah untuk memberikan ruang bagi nilai temp agar dapat dimasukkan ke posisi yang benar.
