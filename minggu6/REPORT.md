@@ -92,7 +92,7 @@ for (int j = i+1; j < jumData; j++) {
 
 
 ## 5.3. Praktikum 2:  Sorting Menggunakan Array of Object
-
+### Dengan Bubble Sort
 ```java
 Data Mahasiswa sebelum sorting
 Nama    : Zidan
@@ -148,7 +148,7 @@ IPK     : 3.1
 ----------------------------
 ```
 
-### Pertanyaan Praktikum 2: 
+### Pertanyaan Praktikum 2 (Bubble Sort): 
 
 1. Perhatikan perulangan di dalam bubbleSort() di bawah ini:
 ```java
@@ -219,3 +219,78 @@ Kelas   : 1F
 IPK     : 3.75
 ----------------------------
 ```
+
+
+### Dengan Selection sort
+```java
+Masukkan jumlah mahasiswa : 5
+--- Data Mahasiswa ke -1 ---
+NIM : 123
+Nama : Ali
+Kelas : 2B
+IPK : 3.9
+--- Data Mahasiswa ke -2 ---
+NIM : 124
+Nama : ila
+Kelas : 2B
+IPK : 3.1
+--- Data Mahasiswa ke -3 ---
+NIM : 125
+Nama : Agus
+Kelas : 2B
+IPK : 3.6
+--- Data Mahasiswa ke -4 ---
+NIM : 126
+Nama : Tika
+Kelas : 2B
+IPK : 3.3
+--- Data Mahasiswa ke -5 ---
+NIM : 127
+Nama : udin
+Kelas : 2B
+IPK : 3.2
+
+Data Mahasiswa sudah terurut menggunakan SELECTION SORT (ASC): 
+Nama    : ila
+NIM     : 124
+Kelas   : 2B
+IPK     : 3.1
+----------------------------
+Nama    : udin
+NIM     : 127
+Kelas   : 2B
+IPK     : 3.2
+----------------------------
+Nama    : Tika
+NIM     : 126
+Kelas   : 2B
+IPK     : 3.3
+----------------------------
+Nama    : Agus
+NIM     : 125
+Kelas   : 2B
+IPK     : 3.6
+----------------------------
+Nama    : Ali
+NIM     : 123
+Kelas   : 2B
+IPK     : 3.9
+----------------------------
+```
+
+### Pertanyaan Praktikum 2 (Bubble Sort): 
+
+1. Di dalam method selection sort, terdapat baris program seperti di bawah ini: 
+```java
+int idxMin = i; for (int j = i+1; j < listMhs.length; j++) { if (listMhs[j].ipk<listMhs[idxMin].ipk){ idxMin = j; } } 
+```
+
+Untuk apakah proses tersebut, jelaskan!
+
+- Kode program tersebut berfungsi untuk mencari posisi (indeks) dari nilai IPK terkecil dalam array pada bagian yang belum terurut. 
+
+- Variabel idxMin awalnya diisi dengan nilai i, yang berarti elemen pada posisi tersebut dianggap sebagai nilai minimum sementara. Kemudian, melalui perulangan for dengan variabel j (dimulai dari i+1 hingga akhir array), setiap elemen dibandingkan dengan nilai pada idxMin.
+
+- Jika ditemukan elemen dengan IPK yang lebih kecil (listMhs[j].ipk < listMhs[idxMin].ipk), maka nilai idxMin akan diperbarui menjadi indeks j. Proses ini terus dilakukan hingga seluruh elemen pada bagian yang belum terurut diperiksa.
+
+- Setelah perulangan selesai, idxMin akan menyimpan indeks dari mahasiswa dengan IPK paling kecil, yang kemudian digunakan untuk ditukar dengan elemen pada posisi i.

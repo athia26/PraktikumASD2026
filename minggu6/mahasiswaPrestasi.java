@@ -1,5 +1,7 @@
 package minggu6;
 
+import minggu7.caseMethod.Mahasiswa;
+
 public class mahasiswaPrestasi {
     mahasiswa05[] listMhs;
     int idx;
@@ -36,4 +38,20 @@ public class mahasiswaPrestasi {
             }
         }
     }
+
+    void selectionSort(){
+        for (int i = 0; i < listMhs.length; i++) {
+            int idxMin = i;
+            for (int j = i+1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk<listMhs[idxMin].ipk){
+                    idxMin = j;
+                }
+            }
+            mahasiswa05 temp = listMhs[idxMin];
+            listMhs[idxMin] = listMhs [i];
+            listMhs[i] = temp;
+        }
+    }
+
+    
 }
