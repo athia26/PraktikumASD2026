@@ -366,3 +366,122 @@ while (j>0 && listMhs[j-1].ipk < temp.ipk) {
 ```
 
 ## 5.3. Latihan Praktikum:
+1. Tambah Data 
+Hasil output: 
+```java
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 1
+Kode           : 1234
+Nama           : budi
+Jenis Kelamin (true=L, false=P): true
+Usia           : 48
+
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 1
+Kode           : 1235
+Nama           : siti
+Jenis Kelamin (true=L, false=P): false
+Usia           : 35
+
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 1
+Kode           : 1236
+Nama           : fandi
+Jenis Kelamin (true=L, false=P): true
+Usia           : 40
+```
+
+2. Tampil data 
+```java
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 2
+Kode   : 1234
+Nama   : budi
+JK     : Laki-laki
+Usia   : 48
+---------------------------
+Kode   : 1235
+Nama   : siti
+JK     : Perempuan
+Usia   : 35
+---------------------------
+Kode   : 1236
+Nama   : fandi
+JK     : Laki-laki
+Usia   : 40
+---------------------------
+```
+
+3. Sorting ASC 
+```java
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 3
+Data berhasil diurutkan ASC
+Kode   : 1235
+Nama   : siti
+JK     : Perempuan
+Usia   : 35
+---------------------------
+Kode   : 1236
+Nama   : fandi
+JK     : Laki-laki
+Usia   : 40
+---------------------------
+Kode   : 1234
+Nama   : budi
+JK     : Laki-laki
+Usia   : 48
+---------------------------
+```
+
+4. Sorting DESC
+```java
+===== MENU =====
+1. Tambah Data
+2. Tampil Data
+3. Sorting ASC (Termuda → Tertua)
+4. Sorting DSC (Tertua → Termuda)
+0. Keluar
+Pilih: 4
+Data berhasil diurutkan DSC
+Kode   : 1234
+Nama   : budi
+JK     : Laki-laki
+Usia   : 48
+---------------------------
+Kode   : 1236
+Nama   : fandi
+JK     : Laki-laki
+Usia   : 40
+---------------------------
+Kode   : 1235
+Nama   : siti
+JK     : Perempuan
+Usia   : 35
+---------------------------
+```
