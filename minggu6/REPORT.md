@@ -278,7 +278,7 @@ IPK     : 3.9
 ----------------------------
 ```
 
-### Pertanyaan Praktikum 2 (Bubble Sort): 
+### Pertanyaan Praktikum 2 (Selection Sort): 
 
 1. Di dalam method selection sort, terdapat baris program seperti di bawah ini: 
 ```java
@@ -294,3 +294,75 @@ Untuk apakah proses tersebut, jelaskan!
 - Jika ditemukan elemen dengan IPK yang lebih kecil (listMhs[j].ipk < listMhs[idxMin].ipk), maka nilai idxMin akan diperbarui menjadi indeks j. Proses ini terus dilakukan hingga seluruh elemen pada bagian yang belum terurut diperiksa.
 
 - Setelah perulangan selesai, idxMin akan menyimpan indeks dari mahasiswa dengan IPK paling kecil, yang kemudian digunakan untuk ditukar dengan elemen pada posisi i.
+
+
+### Dengan INSERTION SORT
+```java
+Masukkan jumlah mahasiswa : 5
+--- Data Mahasiswa ke -1 ---
+NIM : 111
+Nama : ayu
+Kelas : 2c
+IPK : 3.7
+--- Data Mahasiswa ke -2 ---
+NIM : 222
+Nama : dika
+Kelas : 2c
+IPK : 3.0
+--- Data Mahasiswa ke -3 ---
+NIM : 333
+Nama : ila
+Kelas : 2c
+IPK : 3.8
+--- Data Mahasiswa ke -4 ---
+NIM : 444
+Nama : susi
+Kelas : 2c
+IPK : 3.1
+--- Data Mahasiswa ke -5 ---
+NIM : 555
+Nama : yayuk
+Kelas : 2c
+IPK : 3.4
+
+Data Mahasiswa sudah terurut menggunakan INSERTION SORT (ASC): 
+Nama    : dika
+NIM     : 222
+Kelas   : 2c
+IPK     : 3.0
+----------------------------
+Nama    : susi
+NIM     : 444
+Kelas   : 2c
+IPK     : 3.1
+----------------------------
+Nama    : yayuk
+NIM     : 555
+Kelas   : 2c
+IPK     : 3.4
+----------------------------
+Nama    : ayu
+NIM     : 111
+Kelas   : 2c
+IPK     : 3.7
+----------------------------
+Nama    : ila
+NIM     : 333
+Kelas   : 2c
+IPK     : 3.8
+----------------------------
+
+```
+
+### Pertanyaan Praktikum 2 (Insertion sort)
+1. Ubahlah fungsi pada InsertionSort sehingga fungsi ini dapat melaksanakan proses sorting dengan cara descending.
+
+```java
+while (j>0 && listMhs[j-1].ipk < temp.ipk) {
+                listMhs[j] = listMhs[j-1];
+                j--;
+                
+            }
+```
+
+## 5.3. Latihan Praktikum:
