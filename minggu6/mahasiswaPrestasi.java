@@ -1,6 +1,5 @@
 package minggu6;
 
-import minggu7.caseMethod.Mahasiswa;
 
 public class mahasiswaPrestasi {
     mahasiswa05[] listMhs;
@@ -43,7 +42,7 @@ public class mahasiswaPrestasi {
         for (int i = 0; i < listMhs.length; i++) {
             int idxMin = i;
             for (int j = i+1; j < listMhs.length; j++) {
-                if (listMhs[j].ipk<listMhs[idxMin].ipk){
+                if (listMhs[j].ipk < listMhs[idxMin].ipk){
                     idxMin = j;
                 }
             }
@@ -103,18 +102,18 @@ public class mahasiswaPrestasi {
 
     }
 
-    int findBinarySearch (double cari, int left, int right){
+    int findBinarySearch (double cari, int left, int right){ //cari → nilai yang mau dicari (IPK), left → batas kiri index, right → batas kanan index
         int mid; 
-        if(right>=left){
-            mid = (left+right)/2;
-            if (cari == listMhs[mid].ipk) {
-                return (mid);
+        if(right>=left){ //if(right >= left){
+            mid = (left+right)/2; //ambil index tengah
+            if (cari == listMhs[mid].ipk) { //cek apakah nilai yang dicari sama dengan data di tengah
+                return (mid); 
                 
-            } else if (listMhs[mid].ipk > cari) {
-                return findBinarySearch(cari, left, mid-1);
+            } else if (listMhs[mid].ipk > cari) { //kalau nilai tengah lebih besar dari yang dicari, data yang dicari ada di sebelah kiri
+                return findBinarySearch(cari, left, mid-1); //panggil lagi fungsi (rekursi) tapi hanya di bagian kiri:
                 
             } else{
-                return findBinarySearch(cari, mid+1, right);
+                return findBinarySearch(cari, mid+1, right); 
             }
         }
         

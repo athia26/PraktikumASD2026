@@ -14,25 +14,18 @@ public class Kendaraan {
         this.nilaiEfisiensi = nilaiEfisien;
     } 
 
-    public double efisiensiBBM(double jarakT, double bahanBakar){
-        nilaiEfisiensi = 0;
-
-        nilaiEfisiensi = jarakT/bahanBakar;
+    public double efisiensiBBM(){
         
-        return nilaiEfisiensi;
+        return jarakTempuh / konsumsiBahanBakar;
 
     }
 
-    public void tampilData(Kendaraan[] arrKendaraan){
-        Kendaraan terefisien = arrKendaraan [0];
-        
-        for (int i = 1; i < arrKendaraan.length; i++) {
-            if (arrKendaraan[i].nilaiEfisiensi > terefisien.nilaiEfisiensi){
-                terefisien =  arrKendaraan[i]; 
-            }
-        }
-
-        System.out.println("Kendaraan paling efisien adalah dengan plat nomor: "+terefisien.nomorPlat);
+    public void tampilData(){
+        System.out.println("Plat Nomor: " +nomorPlat);
+        System.out.println("Jarak Tempuh: " +jarakTempuh);
+        System.out.println("Konsumsi BBM: " +konsumsiBahanBakar);
+        System.out.println("Efisiensi: "+ efisiensiBBM());
+        System.out.println("-----------------------------");
     }
 
 }

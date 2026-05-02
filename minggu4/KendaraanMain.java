@@ -11,9 +11,9 @@ public class KendaraanMain {
         int jumlah = sc.nextInt();
         sc.nextLine();
 
-        Kendaraan[] n = new Kendaraan[jumlah];
+        Kendaraan[] data = new Kendaraan[jumlah];
 
-        for (int i = 0; i < n.length; i++) {
+        for (int i = 0; i < data.length; i++) {
 
             System.out.println("=====Data kendaran ke-" + (i + 1) + "=====");
 
@@ -26,13 +26,41 @@ public class KendaraanMain {
             double konsumsiBahanBakar = sc.nextInt();
             sc.nextLine();
 
-            n[i] = new Kendaraan(nomorPlat, jarakTempuh, konsumsiBahanBakar, nilaiEfisien);
-            double efisien = n[i].efisiensiBBM(jarakTempuh, konsumsiBahanBakar);
-            System.out.println("Nilai efisiensi: "+efisien);
+            data[i] = new Kendaraan(nomorPlat, jarakTempuh, konsumsiBahanBakar, nilaiEfisien);
+        
+        }
+
+
+        System.out.println();
+        System.out.println("===Efisiensi Per Kendaraan===");
+        for (int i = 0; i < data.length; i++) {
+            data[i].tampilData();
+        }
 
         
-
+        Kendaraan palingEfisien = data[0]; //utk jadi pembanding
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].efisiensiBBM() > palingEfisien.efisiensiBBM()){
+                palingEfisien = data[i];
+            }
         }
+
+        System.out.println();
+        System.out.println("===Paling Efisien===");
+        palingEfisien.tampilData();
+
+        int jumlahDiatas10 = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].efisiensiBBM() > 10 ){
+                jumlahDiatas10++;
+
+            }
+        }
+
+        double persen = (jumlahDiatas10 * 100)/data.length;
+
+        System.out.println("Persentase efisiensi >10:  "+(int) persen+"% ");
+
 
     }
 }
