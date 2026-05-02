@@ -150,3 +150,36 @@ case 6:
     System.out.println("Jumlah tugas yang sudah dikumpulkan: " + jumlah);
     break;
 ```
+
+## 9.2. Praktikum 2:Konversi nilai tugas ke biner 
+
+### Hasil praktikum 2: 
+
+```java
+Menu:
+1. Mengumpulkan tugas
+2. Menilai tugas
+3. Melihat tugas teratas
+4. Melihat daftar tugas
+5. Melihat tugas paling bawah
+6. Jumlah tugas yang dikumpulkan
+Pilih: 2
+Menilai tugas dari Tika
+Masukkan nilai (0-100): 87
+Nilai tugas Tika adalah 87
+Nilai biner tugas: 1010111
+```
+
+### Pertanyaan Praktikum 2: 
+
+1. Jelaskan alur kerja dari method konversiDesimalKeBiner!
+
+    - Method konversiDesimalKeBiner bekerja dengan cara membagi bilangan desimal secara berulang dengan 2 dan menyimpan sisa hasil pembagian ke dalam stack.
+
+    - Pada proses pertama, nilai dibagi 2 dan sisa pembagian dimasukkan ke dalam stack hingga nilai menjadi 0. Kemudian pada proses kedua, data di dalam stack diambil kembali menggunakan operasi pop(), sehingga urutan sisa menjadi terbalik.
+
+    - Karena stack bersifat LIFO (Last In First Out), maka hasil akhir yang diperoleh merupakan bilangan biner dari nilai desimal tersebut.
+    
+2. Pada method konversiDesimalKeBiner, ubah kondisi perulangan menjadi while (kode != 0), bagaimana hasilnya? Jelaskan alasannya!
+    
+    - Hasil yang diperoleh akan tetap sama. Hal ini karena perulangan akan berhenti saat nilai menjadi 0, baik menggunakan kondisi > 0 maupun != 0. Perbedaan hanya terjadi jika terdapat nilai negatif, di mana kondisi != 0 masih akan dijalankan, sedangkan > 0 tidak.

@@ -47,7 +47,9 @@ public class MahasiswaDemo05 {
                             System.out.println("Nilai harus antara 0-100");
                         }
                         
-                        System.out.printf("Nilai tugas %s adalah %d\n", dinilai.nama, nilai);
+                        //System.out.printf("Nilai tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalkeBiner(nilai);
+                        System.out.println("Nilai biner tugas: "+biner);
                     }
                     break;
                 
