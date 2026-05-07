@@ -10,6 +10,10 @@
 
 ## 10.1. Praktikum 1: Operasi dasar queue
 
+- Code Program 
+    - [Queue.java](Queue.java)
+    - [QueueMain.java](QueueMain.java)
+
 ### Hasil praktikum 1: 
 
 ```java
@@ -103,6 +107,7 @@ queue overflow dan queue underflow, program dihentikan!
             System.out.println("Queue sudah penuh");
             System.exit(0);
         }
+    }
 
     public int dequeue (){
         int dt = 0;
@@ -110,9 +115,131 @@ queue overflow dan queue underflow, program dihentikan!
             System.out.println("Queue masih kosong");
             System.exit(0);
         }
+    }
     ```
 
 
+## 10.2. Praktikum 2: Antrian Layanan Akademik
+
+- Code Program 
+    - [Mahasiswa.java](Mahasiswa.java)
+    - [AntrianLayanan.java](AntrianLayanan.java)
+    - [MainLayananSIAKAD.java](mainLayananSIAKAD.java)
 
 
-    
+### Hasil praktikum 2: 
+
+```java
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 1
+NIM       :123  
+Nama      :Andi
+Prodi     :TI
+Kelas     :1G
+Andi berhasil masuk ke antrian
+
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 1
+NIM       :124
+Nama      :Bobi
+Prodi     :TI
+Kelas     :1A
+Bobi berhasil masuk ke antrian
+
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 4
+Daftar mahasiswa dalam antrian: 
+NIM - NAMA - PRODI - KELAS
+1.123 - Andi - TI - 1G
+2.124 - Bobi - TI - 1A
+
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 2
+Melayani Mahasiswa: 123 - Andi - TI - 1G
+
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 4
+Daftar mahasiswa dalam antrian: 
+NIM - NAMA - PRODI - KELAS
+1.124 - Bobi - TI - 1A
+
+=== Menu Antrian Layanan Akademik===
+1. Tambah mahasiswa ke antrian
+2. Layani mahasiswa
+3. Lihat mahasiswa terdepan 
+4. Lihat semua antrian
+5. Jumlah Mahasiswa dalam antrian
+6. Keluar
+----------------------
+Pilih menu: 5
+Jumlah dalam antrian: 1
+```
+
+### Pertanyaan Praktikum 2: 
+1. Lakukan modifikasi program dengan menambahkan method baru bernama LihatAkhir pada class
+AntrianLayanan yang digunakan untuk mengecek antrian yang berada di posisi belakang. Tambahkan
+pula daftar menu 6. Cek Antrian paling belakang pada class LayananAkademikSIAKAD sehingga
+method LihatAkhir dapat dipanggil!
+
+```java
+public void lihatAkhir(){
+        if (isEmpty()){
+            System.out.println("Antrian kosong");
+        } else{
+            System.out.println("Mahasiswa paling belakang: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
+    }
+
+```
+
+## 10.3. Tugas Praktikum
+
+### Hasil Tugas Praktikum: 
+
+- Class Diagram:    
+    ![Class Diagram](img/image.png)
+    ![Class Diagram](img/imagecopy.png)
+
+- Code Program 
+    - [Mahasiswa.java](Mahasiswa.java)
+    - [AntrianKRS.java](AntrianKRS.java)
+    - [MainKRS.java](MainKRS.java)
+
+
