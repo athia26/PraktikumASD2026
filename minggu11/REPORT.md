@@ -132,3 +132,33 @@ Bimon           125             2B              3.8
     - Merupakan proses dari penghapusan node di tengah/di akhir. temp.next = temp.next.next digunakan untuk melompati pointer sebelumnya yang akan "dihapus". lalu tail = temp. untuk menyimpan nilai tail yg baru.  
 
 ## 11.3. Tugas Praktikum 
+
+- Code Program 
+    - [tgsMahasiswa.java](tgsMahasiswa.java)
+    - [tgsNode.java](tgsNode.java)
+    - [tgsQueueMhs.java](tgsQueueMhs.java)
+    - [tgsMain.java](tgsMain.java)
+
+- Hasil Praktikum 1: 
+
+```java
+Andi sudah masuk antrian
+Budi sudah masuk antrian
+Citra sudah masuk antrian
+------------------------------------
+Jumlah mahasiswa dalam antrian: 3
+Daftar antrian sekarang: 
+- NIM: 12345, Nama: Andi
+- NIM: 12346, Nama: Budi
+- NIM: 12347, Nama: Citra
+------------------------------------
+Antrian terdepan: NIM: 12345, Nama: Andi
+Antrian terakhir: NIM: 12347, Nama: Citra
+------------------------------------
+Memanggil antrian: Andi
+Antrian terdepan: NIM: 12346, Nama: Budi
+Antrian terakhir: NIM: 12347, Nama: Citra
+------------------------------------
+Antrian sudah kosong
+Jumlah mahasiswa dalam antrian: 0
+```
