@@ -15,51 +15,51 @@ public class DoubleLinkedList05 {
     }
 
     public void addFirst (Mahasiswa05 data){
-        Node05 newNode = new Node05(data);
+        Node05 newNode = new Node05(data); //membuat node baru 
         if (isEmpty()){
-            head = tail = newNode;
-        } else {
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
+            head = tail = newNode; //kalau kosong, node baru jadi head dan tail
+        } else { //mau memasukkan node baru ke paling depan
+            newNode.next = head; //node baru menunjuk setelahnya ke head yg lama 
+            head.prev = newNode; //head sebelumnya menunjuk ke node baru
+            head = newNode; //head nya diganti node baru 
         }
-        size++;
+        size++; //menambah size
     }
 
     public void addLast (Mahasiswa05 data){
         Node05 newNode = new Node05(data);
         if (isEmpty()){
-            head = tail = newNode;
-        } else{
-            tail.next = newNode;
-            newNode.prev = tail;
-            tail = newNode;
+            head = tail = newNode; //kalau kosong, node baru jadi head dan tail 
+        } else{ //mau memasukkan node baru ke paling belakang
+            tail.next = newNode; //tail lama menunjuk selanjutnya ke node baru 
+            newNode.prev = tail; //node baru menunjuk sebelumnya ke tail lama 
+            tail = newNode; //tail menjadi node baru 
         }
         size++;
     }
 
     public void insertAfter (String keyNim, Mahasiswa05 data){
-        Node05 current = head;
-        while (current != null && !current.data.nim.equals(keyNim)) {
-            current = current.next;
+        Node05 current = head; //head jadi variabel current yg jalan jalan nyari data
+        while (current != null && !current.data.nim.equals(keyNim)) { //selama current bukan null dan current belum sesuai dengan keyNim, 
+            current = current.next; //maka current tetap jalan ke selanjutnya 
         } 
 
-        if (current == null){
+        if (current == null){ //kalau sampai akhir current nya null, berarti gada nim yg dimau 
             System.out.println("Data dengan NIM "+ keyNim + " tidak ditemukan");
             return;
         }
 
-        Node05 newnNode05 = new Node05(data);
+        Node05 newNode05 = new Node05(data); //membuat node baru 
 
-        if (current==tail){
-            newnNode05.prev = current;
-            current.next = newnNode05;
-            tail = newnNode05;
+        if (current==tail){ //jika current nya di tail
+            newNode05.prev = current; //node baru menunjuk sebelumnya ke variabel current 
+            current.next = newNode05; //current sebelumnya menunjuk setelahnya ke node baru  
+            tail = newNode05; //tail jadi node baru 
         } else {
-            newnNode05.prev = current;
-            newnNode05.next = current.next;
-            current.next.prev = newnNode05;
-            current.next = newnNode05;
+            newNode05.prev = current; //node baru menunjuk sebelumnya ke variabel current 
+            newNode05.next = current.next; //node baru menunjuk setelahnya ke setelahnya variabel current
+            current.next.prev = newNode05; //node setelah current nunjuk sebelumnya ke node baru  
+            current.next = newNode05; //setelahnya current nunjuk ke node baru 
         }
         System.out.println("Data berhasil disisipkan setelah NIM "+ keyNim);
         size++;
@@ -81,7 +81,7 @@ public class DoubleLinkedList05 {
 
         while (current != null && i < index - 1) {
             current = current.next;
-            i++;
+            i++; //utk maju setelah 
         }
 
         if (current == null){
@@ -93,13 +93,16 @@ public class DoubleLinkedList05 {
 
         if (current == tail){
             addLast(data);
+            return;
         } else{
-            newNode.next = current.next;
-            newNode.prev = current;
-            current.next.prev = newNode;
-            current.next = newNode;
+            newNode.next = current.next; //setelahnya node baru nunjuk ke setelahnya current 
+            newNode.prev = current; //node baru sebelumnya nunjuk ke current 
+            current.next.prev = newNode; //node setelahnya current menunjuk sebelumnya ke node baru 
+            current.next = newNode; //current menunjuk setelahnya ke node baru 
+            
         }
         size++;
+        
     }
 
     public void removeAfter(String keyNim){
@@ -108,18 +111,18 @@ public class DoubleLinkedList05 {
             return;
         }
     
-        Node05 current = head;
+        Node05 current = head; //current nya head utk sementara
     
         while (current != null && !current.data.nim.equals(keyNim)){
-            current = current.next;
+            current = current.next; //slama current bukan null dan bukan sesuai keynim, current lanjut jalan terus 
         }
     
         if (current == null || current.next == null){
-            System.out.println("Node setelah key tidak ditemukan");
+            System.out.println("Node setelah key tidak ditemukan"); //jika tidak ada current yg dimau, maka ga ketemu
             return;
         }
     
-        Node05 removedNode = current.next;
+        Node05 removedNode = current.next; //node yg mau dihapus adalah setelahnya current 
     
         if (removedNode == tail){
             tail = current;
@@ -184,11 +187,11 @@ public class DoubleLinkedList05 {
 
         Mahasiswa05 dataHapus = head.data;
 
-        if (head == tail){
+        if (head == tail){ //jika head == tail maka keduanya dijadikan null 
             head = tail = null;
-        } else{
-            head = head.next;
-            head.prev = null;
+        } else{ 
+            head = head.next; //head nya jadi setelahnya head
+            head.prev = null; //sebelumnya head jadi null 
         }
         System.out.println("Data berhasil dihapus");
         dataHapus.tampil();
