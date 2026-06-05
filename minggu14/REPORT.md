@@ -104,6 +104,65 @@ NIM: 12346      Nama: Badar     Kelas: B        IPK: 3.85
 
     - parent = current; -> Menyimpan node saat ini sebagai parent sebelum berpindah ke node berikutnya.
     - if (mahasiswa.ipk < current.mahasiswa.ipk) -> Membandingkan IPK data baru dengan IPK node saat ini. Jika IPK baru lebih kecil, maka pencarian posisi dilanjutkan ke subtree kiri.
-    - 
+    - if (current == null) -> Jika anak kiri kosong, berarti posisi penyisipan telah ditemukan. dan node disisipkan sebagai anak kiri dari parent 
+    - Jika IPK baru lebih besar atau sama dengan IPK node saat ini, pencarian dilanjutkan ke subtree kanan. Dan jika anak kanan kosong, maka node baru dipasang sebagai anak kanan dari parent 
 
 6. Jelaskan langkah-langkah pada method delete() saat menghapus sebuah node yang memiliki dua anak. Bagaimana method getSuccessor() membantu dalam proses ini?
+    
+    - Cari node yang akan dihapus (current).
+    - Cari successor menggunakan method getSuccessor().
+    - Successor adalah node dengan nilai terkecil pada subtree kanan dari node yang akan dihapus.
+    - Ganti posisi node yang dihapus dengan successor.
+    - Hubungkan kembali subtree kiri dan subtree kanan agar struktur BST tetap valid.
+    - Node lama kemudian dianggap terhapus dari tree.
+
+    - peran getSuccessor untuk mencari node pengganti yang paling sesuai 
+
+## 14.2. Praktikum 2
+
+- Code Program 
+    - [BinaryTreeArray05.java](BinaryTreeArray05.java)
+    - [BinaryTreeMain05.java](BinaryTreeMain05.java)
+    - [Mahasiswa05.java](Mahasiswa05.java)
+    - [Node05.java](Node05.java)
+
+- Hasil Praktikum 1: 
+
+```java
+Inorder Traversal Mahasiswa: 
+NIM: 12348      Nama: Dewi      Kelas: B        IPK: 3.35
+NIM: 12346      Nama: Badar     Kelas: B        IPK: 3.41
+NIM: 12349      Nama: Devi      Kelas: A        IPK: 3.48
+NIM: 12345      Nama: Ali       Kelas: A        IPK: 3.57
+NIM: 123410     Nama: Ehsan     Kelas: D        IPK: 3.61
+NIM: 12347      Nama: Candra    Kelas: C        IPK: 3.75
+NIM: 123411     Nama: Fizi      Kelas: B        IPK: 3.86
+```
+
+- Pertanyaan Praktikum 2: 
+1. Apakah kegunaan dari atribut data dan idxLast yang ada di class BinaryTreeArray?
+
+    - Digunakan untuk menyimpan seluruh node binary tree dalam bentuk tree 
+    - indexLast untuk menyimpan indeks terakhir yang berisi data pada array agar traversal tidak mengakses indeks yang berada di luar data yang digunakan. 
+
+2. Apakah kegunaan dari method populateData()?
+    
+    - method tsb digunakan untuk mengisi binary tree array dengan data mahasiswa yang sudah dibuat sebelumnya. 
+
+3. Apakah kegunaan dari method traverseInOrder()?
+
+    - Method ini digunakan untuk menampilkan isi Binary Tree menggunakan teknik Inorder Traversal.
+
+4. Jika suatu node binary tree disimpan dalam array indeks 2, maka di indeks berapakah posisi left child dan right child masing-masing?
+
+    - Left Child  berada pada indeks 5
+    - Right Child berada pada indeks 6
+
+5. Apa kegunaan statement int idxLast = 6 pada praktikum 2 percobaan nomor 4?
+
+    - indexlast = 6 digunakan untuk menunjukkan indeks terakhir yang berisi data adalah indeks ke-6.
+
+6. Mengapa indeks 2*idxStart+1 dan 2*idxStart+2 digunakan dalam pemanggilan
+rekursif, dan apa kaitannya dengan struktur pohon biner yang disusun dalam array? 
+    - Dengan rumus tersebut, struktur pohon dapat direpresentasikan dalam array tanpa perlu menggunakan pointer left dan right seperti pada Binary Search Tree berbasis linked node.
+
