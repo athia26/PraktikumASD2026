@@ -126,7 +126,7 @@ NIM: 12346      Nama: Badar     Kelas: B        IPK: 3.85
     - [Mahasiswa05.java](Mahasiswa05.java)
     - [Node05.java](Node05.java)
 
-- Hasil Praktikum 1: 
+- Hasil Praktikum 2: 
 
 ```java
 Inorder Traversal Mahasiswa: 
