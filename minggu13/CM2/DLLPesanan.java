@@ -3,6 +3,7 @@ package minggu13.CM2;
 public class DLLPesanan {
     NodePesanan head, tail;
     
+    
     public boolean isEmpty(){
         return head == null;
     }
@@ -15,8 +16,8 @@ public class DLLPesanan {
         } else {
             NodePesanan current = head;
 
-            while (current!=null && current.data.namaPesanan.compareToIgnoreCase(data.namaPesanan)<0) {
-                current = current.next;
+            while (current!=null && current.data.namaPesanan.compareToIgnoreCase(data.namaPesanan)<0) { //compare huruf depan 
+                current = current.next; 
             }
             
             if (current == null){
@@ -36,6 +37,20 @@ public class DLLPesanan {
             }
         }
     }
+
+    public DLLRekapJam buatRekapJam (){
+        DLLRekapJam rekap = new DLLRekapJam();
+
+        NodePesanan current = head;
+
+        while(current != null){
+            rekap.tambahJam(current.data.jamPesanan);
+            current = current.next;
+        }
+
+        return rekap;
+    }
+
 
     public void laporanPesanan(){
         if (isEmpty()){

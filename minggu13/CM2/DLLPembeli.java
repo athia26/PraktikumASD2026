@@ -8,54 +8,61 @@ public class DLLPembeli {
         return head == null;
     }
 
-    public void tambahAntrian(Pembeli data){ //addLast()
+    public void tambahAntrian(Pembeli data){ 
         
-        NodePembeli newNode = new NodePembeli(data);
-
+        NodePembeli newNode = new NodePembeli(data); 
         if (isEmpty()){
-            head = tail = newNode;
+            head = tail = newNode; 
         } else {
-            tail.next = newNode;
-            newNode.prev = tail;
-            tail = newNode;
+            tail.next = newNode; 
+            newNode.prev = tail; 
+            tail = newNode; 
         }
-
-        
     }
 
-    public void cetakAntrian(){ //print()
+    public void cetakAntrian(){ 
         if (isEmpty()){
             System.out.println("Antrian masih kosong");
             return;
         }
 
-        NodePembeli current = head;
+        NodePembeli current = head; 
+        
         System.out.println("======================");
         System.out.println("Daftar Antrian Pembeli");
         System.out.println("======================");
         System.out.println("No Antrian\tNama\tNo HP");
 
-        while (current != null) {
-            current.data.tampil();
-            current = current.next;
+        while (current != null) { 
+            current.pembeli.tampil();
+            current = current.next; 
             
         }
     }
 
-    public Pembeli layaniPembeli(){
+    public Pembeli layaniPembeli(){ 
         if (isEmpty()){
             System.out.println("Antrian masih kosong");
             return null;
         } 
 
-        Pembeli data = head.data;
+        Pembeli palingDepan = head.pembeli;
 
         if (head==tail){
-            head=tail=null;
+            head=tail=null; 
+
         } else{
-            head = head.next;
+            head = head.next; 
             head.prev = null;
         }
-        return data;
+        return palingDepan;
     }
 }
+
+
+
+
+
+
+
+

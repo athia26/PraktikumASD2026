@@ -8,6 +8,7 @@ public class MainResto {
 
         DLLPembeli antrian = new DLLPembeli();
         DLLPesanan pesanan = new DLLPesanan();
+        DLLRekapJam rekap = new DLLRekapJam();
 
         int pilih;
 
@@ -19,6 +20,7 @@ public class MainResto {
             System.out.println("2. Cetak Antrian ");
             System.out.println("3. Hapus Antrian dan Pesan");
             System.out.println("4. Laporan Pesanan");
+            System.out.println("5. Laporan Pesanan Per Jam ");
             System.out.println("0. Keluar");
             System.out.println("------------------------------");
             System.out.print("Pilih menu: ");
@@ -40,10 +42,15 @@ public class MainResto {
                     break;
             
                 case 3:
+                
                     Pembeli p = antrian.layaniPembeli();
 
                     if (p != null){
                         System.out.println("--- Tambahkan Pesanan ---");
+                        
+                        System.out.println("Jam Pesan: ");
+                        String jamPesan = sc.nextLine();
+
                         System.out.print("Kode Pesanan  : ");
                         int kode = sc.nextInt();
                         sc.nextLine();
@@ -55,9 +62,10 @@ public class MainResto {
                         int harga = sc.nextInt();
                         sc.nextLine();
 
-                        Pesanan newPesanan = new Pesanan(kode, namaPesanan, harga);
+                        Pesanan newPesanan = new Pesanan(kode, namaPesanan, harga, jamPesan);
 
                         pesanan.tambahPesanan(newPesanan);
+
 
                         System.out.println(p.namaPembeli + " telah memesan "+namaPesanan);
                     }
@@ -65,6 +73,11 @@ public class MainResto {
 
                 case 4: 
                     pesanan.laporanPesanan();
+                    break;
+
+                case 5: 
+                    rekap = pesanan.buatRekapJam(); //memanggil method buatrekapjam dari dll pesanan untuk menambahkan dll pesanan dan dilakukan pengecekan di dll rekap jam 
+                    rekap.tampil();
                     break;
 
                 case 0:
@@ -78,3 +91,8 @@ public class MainResto {
         } while (pilih != 0);
     }
 }
+
+
+
+
+

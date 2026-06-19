@@ -1,11 +1,11 @@
 package minggu13.CM2;
 
 public class NodePembeli {
-    Pembeli data;
+    Pembeli pembeli;
     NodePembeli next;
     NodePembeli prev;
 
     public NodePembeli (Pembeli data){
-        this.data = data;
+        this.pembeli = data;
     }
 }
