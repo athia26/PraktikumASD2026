@@ -129,3 +129,61 @@
     ```
 
 
+## 15.2. Praktikum 2
+
+- Code Program 
+    - [Mahasiswa.java](Mahasiswa.java)
+    - [ListMahasiswa.java](ListMahasiswa.java)
+
+- Hasil Praktikum: 
+    
+    ```java
+    Mahasiswa{nim = 201234, nama = Noureen, notelp = 021xx1 }
+    Mahasiswa{nim = 201235, nama = Akhleema, notelp = 021xx2 }
+    Mahasiswa{nim = 201236, nama = Shannum, notelp = 021xx3 }
+
+    Mahasiswa{nim = 201234, nama = Noureen, notelp = 021xx1 }
+    Mahasiswa{nim = 201235, nama = Akhleema Lela, notelp = 021xx2 }
+    Mahasiswa{nim = 201236, nama = Shannum, notelp = 021xx3 }
+    ```
+   
+- Pertanyaan Praktikum: 
+1. Pada fungsi tambah() yang menggunakan unlimited argument itu menggunakan konsep apa? Dan kelebihannya apa?
+
+    - menggunakna konsep varags (variable arguments) yang ditunjukkan oleh tanda titik 3 (...). Memiliki kelebihan jumlah parameter lebih fleksibel dan tidak perlu membuat banyak overload method
+
+2. Pada fungsi linearSearch() di atas, silakan diganti dengan fungsi binarySearch() dari collection!
+
+    ```java
+    public int binarySearch(String nim){
+        Collections.sort(
+            mahasiswas, 
+            Comparator.comparing(m -> m.nim));
+
+        return Collections.binarySearch(
+            mahasiswas, 
+            new Mahasiswa(nim, "", ""), 
+            Comparator.comparing(m -> m.nim));
+    }
+    ```
+
+
+3. Tambahkan fungsi sorting baik secara ascending ataupun descending pada class tersebut!
+
+    ```java
+    public void sortAscending(){
+        Collections.sort(
+            mahasiswas,
+            Comparator.comparing(m -> m.nim)
+        );
+    }
+
+    public void sortDescending(){
+        Collections.sort(
+            mahasiswas,
+            Comparator.comparing((Mahasiswa m) -> m.nim)
+                      .reversed()
+        );
+    }
+    ```
+    
