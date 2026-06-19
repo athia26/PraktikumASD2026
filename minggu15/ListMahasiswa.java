@@ -57,8 +57,7 @@ public class ListMahasiswa {
     public void sortDescending(){
         Collections.sort(
             mahasiswas,
-            Comparator.comparing((Mahasiswa m) -> m.nim)
-                      .reversed()
+            Comparator.comparing((Mahasiswa m) -> m.nim).reversed()
         );
     }
 

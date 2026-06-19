@@ -186,4 +186,12 @@
         );
     }
     ```
-    
+
+
+## 15.4. Tugas Praktikum
+
+- Code Program 
+    - [TgsMahasiswa.java](TgsMahasiswa.java)
+    - [TgsMain.java](TgsMain.java)
+    - [TgsMatkul.java](TgsMatkul.java)
+    - [TgsNilai.java](TgsNilai.java)
